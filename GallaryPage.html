@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <style>
+        h1 {
+            margin: 0;
+            padding: 1%;
+            padding-top: 15px;
+            overflow: hidden;
+            background-color: black;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+        }
+
+        body {
+            height: 100%;
+
+            margin: 0;
+            padding: 0%;
+            margin: 0;
+        }
+
+        .contener {
+
+            height: 96vh;
+            width: 100%;
+            background-image: url(Gallary_Images/img9.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: 5s;
+            margin-top: -2%;
+            animation-name: animate;
+            animation-direction: alternate-reverse;
+            animation-duration: 30s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+            animation-play-state: running;
+            animation-timing-function: ease-in-out;
+
+        }
+
+        @keyframes animate {
+            0% {
+                background-image: url(img10.jpg);
+
+            }
+
+            20% {
+                background-image: url(img10.jpg);
+            }
+
+            40% {
+                background-image: url(img8.jpg);
+
+            }
+
+            60% {
+                background-image: url(img5.jpg);
+
+            }
+
+            80% {
+                background-image: url(img2.jpg);
+
+            }
+
+            100% {
+                background-image: url(img1.jpg);
+            }
+        }
+
+    
+
+       
+
+        .backbtn a:hover {
+            color: rgb(15, 113, 234);
+        }
+
+        .hedding a {
+
+            position: absolute;
+            margin-left: 2%;
+            top: 85%;
+            display: block;
+            overflow: hidden;
+            width: 50px;
+            text-decoration: none;
+            color: white;
+            font-size: 120%;
+
+        }
+        a:hover{
+            color: rgb(53, 53, 125);
+        }
+    </style>
+</head>
+
+<body>
+    <br>
+    <div class="contener">
+        <center>
+            <h1 style="color: white; font-size: 200%;   border: black;border: black;padding-top: 20px; ">Mumbai Gallary
+            </h1>
+        </center>
+        <div class="hedding">
+            <a href="index.html" style="padding: 1%; background-color: rgb(1, 1, 0);">&laquo;Back</a>
+        </div>
+</body>
+
+</html>

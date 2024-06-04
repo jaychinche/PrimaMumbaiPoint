@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body style="background-color:powderblue;">
+  <style>
+   * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .header {
+      overflow: hidden;
+      background-color: black;
+      padding: 20px 10px;
+    }
+
+    .header a {
+      float: left;
+      color: black;
+      text-align: center;
+      padding: 12px;
+      text-decoration: none;
+      font-size: 18px;
+      line-height: 25px;
+      border-radius: 4px;
+    }
+
+    .header a.logo {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .header a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .header a.active {
+      background-color: dodgerblue;
+      color: white;
+    }
+
+    .header-right {
+      float: right;
+    }
+
+    @media screen and (max-width: 500px) {
+      .header a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+
+      .header-right {
+        float:right;
+      }
+    }
+
+    .container {
+
+
+
+      margin-top: 27px;
+      height: 650px;
+      width: 100%;
+
+
+
+    }
+
+    .column {
+
+      background-color: rgb(255, 255, 255);
+      width: 47.5%;
+      height: 600px;
+
+      float: left;
+      margin-left: 62px;
+      padding-right: 73px;
+
+
+    }
+    body{
+          background-color: white;
+          margin: 0;
+            padding: 0;
+           position: relative;
+        }
+             /* for footer */
+    .bg-div {
+      background: #2c292f;
+      overflow: hidden;
+      border-radius: 0px 0px 20px 20px;
+
+    }
+
+    @media (max-height:800px) {
+      footer {
+        position: static;
+      }
+
+      header {
+        padding-top: 40px;
+      }
+    }
+
+    .footer-distributed {
+      background-color: #000000;
+      box-sizing: border-box;
+      width: 100%;
+      text-align: left;
+      font: bold 16px sans-serif;
+      padding: 50px 50px 60px 50px;
+      margin-top: 2px;
+      margin-bottom: 4px;
+    }
+
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right {
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    /* Footer left */
+
+    .footer-distributed .footer-left {
+      width: 30%;
+    }
+
+    .footer-distributed h1 {
+      color: #ffffff;
+      font: normal 20px;
+      margin: 0;
+    }
+
+    /* The company logo */
+
+    .footer-distributed .footer-left img {
+      width: 30%;
+    }
+
+    .footer-distributed h span {
+      color: #ca8989;
+    }
+
+    /* Footer links */
+
+    .footer-distributed .footer-links {
+      color: #7d5d5d;
+      margin: 20px 0 12px;
+    }
+
+    .footer-distributed .footer-links a {
+      display: inline-block;
+      line-height: 1.8;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .footer-distributed .footer-company-name {
+      color: #8f9296;
+      font-size: 14px;
+      font-weight: normal;
+      margin: 0;
+    }
+
+    /* Footer Center */
+
+    .footer-distributed .footer-center {
+      width: 35%;
+    }
+
+
+    .footer-distributed .footer-center i {
+      background-color: #33383b;
+      color: #000000;
+      font-size: 25px;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 42px;
+      margin: 10px 15px;
+      vertical-align: middle;
+    }
+
+    .footer-distributed .footer-center i.fa-envelope {
+      font-size: 17px;
+      line-height: 38px;
+    }
+
+    .footer-distributed .footer-center p {
+      display: inline-block;
+      color: #747171;
+      vertical-align: middle;
+      margin: 0;
+    }
+
+    .footer-distributed .footer-center p span {
+      display: block;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 2;
+    }
+
+    .footer-distributed .footer-center p a {
+      color: #747171;
+      text-decoration: none;
+      ;
+    }
+
+
+    /* Footer Right */
+
+    .footer-distributed .footer-right {
+      width: 30%;
+    }
+
+    .footer-distributed .footer-company-about {
+      line-height: 20px;
+      color: #0f4575;
+      font-size: 13px;
+      font-weight: normal;
+      margin: 0;
+    }
+
+    .footer-distributed .footer-company-about span {
+      display: block;
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .footer-distributed .footer-icons {
+      margin-top: 25px;
+    }
+
+    .footer-distributed .footer-icons a {
+      display: inline-block;
+      width: 35px;
+      height: 35px;
+      cursor: pointer;
+      background-color: #33383b;
+      border-radius: 2px;
+
+      font-size: 20px;
+      color: #ffffff;
+      text-align: center;
+      line-height: 35px;
+
+      margin-right: 3px;
+      margin-bottom: 5px;
+    }
+
+    /* Here is the code for Responsive Footer */
+    /* You can remove below code if you don't want Footer to be responsive */
+
+
+    @media (max-width: 880px) {
+
+      .footer-distributed .footer-left,
+      .footer-distributed .footer-center,
+      .footer-distributed .footer-right {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+
+      .footer-distributed .footer-center i {
+        margin-left: 0;
+      }
+
+    }
+        .dropdown .dropbtn {
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: black;
+    }
+
+    .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: right;
+    }
+
+    .dropdown-content a:hover {
+      background-color: white;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    body {margin:0;font-family:Arial}
+
+.topnav {
+  overflow: hidden;
+  background-color: black;
+}
+
+.topnav a {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+.topnav .icon {
+  display: none;
+}
+
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 17px;    
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(155, 92, 92, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: right;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: right;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: rgb(19, 14, 14);
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background-color: gray;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+  </style>
+  </head>
+  <body>
+
+<div class="main">
+    
+
+  <div class="header">
+  <b> <strong> <a  style="color: white;"class="logo">Best Malls in Mumbai </a></strong></b>
+    <div class="topnav" id="myTopnav">
+      <a href="index.html" class="active">Home</a>
+      <a href="GallaryPage.html">View Mumbai Gallary </a>
+      <a href="ContactForm.html">Contact Us</a>
+      <div class="dropdown">
+        <button class="dropbtn">Search & Find anything in Mumbai 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="CarShowroomAnimation.html">Car Showrooms</a>
+          <a href="BikeAnimation.html">Bike Showrooms</a>
+          <a href="MallsAnimation.html">Malls</a>
+          <a href="GymsAnimation.html">Best Gym</a>
+          <a href="CafeAnimation.html">Cafes</a>
+          <a href="Restaurantanimation.html">Restaurant</a>
+          <a href="StreetFoodAnimation.html">Street Food</a>
+          <a href="NeurologistAnimation.html">Best Neurologist</a>
+          <a href="TempleAnimation.html"> Temple</a>
+        </div>
+      </div> 
+      <a href="Aboutus.html">About Us</a>
+    
+    </div>
+      <li>
+        
+        
+          
+        </div>
+      </li>
+      
+    </div>
+    
+  </div>
+
+
+
+</div>
+  
+      <div class="container">
+          
+        
+     
+       <div class="column"    style="margin-left: 0px;"  >
+        <h1> <center>Phoenix Marketcity Mumbai</center>  </h1>
+        <div class="photo">
+           <center><img src="image1.jpg" alt="Mall 1 " width="500" height="300"></center>
+          <p>
+            <center><b> About mall:</b> Phoenix Marketcity is situated in Kurla, Mumbai and developed by Pheonix mills.
+            </center>
+        </p><center>
+        <P><b>Address:</b>Lal Bahadur Shastri Rd, Patelwadi Mumbai, Maharashtra 400070</P>
+        <p><b>Opening Hours:</b> 11:00AM - 12:00AM</p>
+        <p><b>Contact:</b> 022 4400 1000</p>
+        <center><a href="https://www.phoenixmarketcity.com/mumbai">Click here to Visit the website</center></a>
+         </div></div>
+        </center>
+      
+       
+       <style></style>
+
+       <div class="column"  style="margin: right 20px;" >
+       <h1> <center>Oberoi Mall</center>  </h1>
+        
+       <div class="photo">
+       <center><img src="image2.jfif" alt="Mall  " width="500" height="300"></center>
+        <p>
+            <center><b>About mall:</b> Complex with 4 floors of brand-name stores,
+                plus a food court & movie theater.</center>
+        </p><center>
+        <P><b>Address:</b>Western Express Highway Goregaon Mumbai, Maharashtra 4000630</P>
+        <p><b>Opening Hours:</b> 11:00AM - 11:00PM</p>
+        <p><b>Contact:</b> 022 4099 0824</p>
+        <center><a href="https://www.oberoimall.com/">Click here to Visit the website</center></a>
+        </center>
+      </div>
+        </div>
+  </div>
+
+  <div class="container">
+          
+        
+     
+    <div class="column"    style="margin-left: 0px;"  >
+      <h1> <center>Infinite Mall</center>  </h1> 
+   <div class="photo">
+    <center><img src="image3.webp" alt="Mall  " width="500" height="300"></center>
+    <p>
+        <center><b>About mall:</b> Vibrant shopping mall offering global brands,
+            a food court & an indoor amusement park.</center>
+    </p><center>
+    <P><b>Address:</b>New Link Rd, Mindspace, Malad West, Mumbai, Maharashtra 400064</P>
+    <p><b>Opening Hours:</b> 11:00AM - 10:00PM</p>
+    <p><b>Contact:</b> 022 4234 0000</p>
+    <center><a href="https://www.infinitimall.com/">Click here to Visit the website</center></a>
+</center>
+   </div></div>
+     
+
+    <div class="column"  style="margin: right 20px;" >   
+    <h1> <center>Growel's Mall</center>  </h1>   
+    <div class="photo">
+        <center><img src="image4.jpg" alt="Mall  " width="500" height="300"></center>
+        <p>
+            <center><b>About mall:</b> Sizable shopping mall with classical flair, popular restaurants & movie theater.
+            </center>
+        </p><center>
+        <P><b>Address:</b> Western Express Highway, Akurli Rd,Kandivali East, Mumbai, Maharashtra 400101</P>
+        <p><b>Opening Hours:</b> 11:00AM - 9:30PM</p>
+        <p><b>Contact:</b> 022 6699 3001</p>
+        <center><a href="https://www.growels101.com/">Click here to Visit the website</center></a>
+    </center>
+
+  </div>
+     </div>
+       </div>
+</div>
+
+<div class="container">
+          
+        
+     
+  <div class="column"    style="margin-left: 0px;"  >
+   <h1> <center>R city Mall</center>  </h1> 
+   <div class="photo">
+    <center><img src="image5.jpg" alt="Mall  " width="500" height="300"></center>
+    
+    <p>
+        <center><b>About mall:</b> Massive indoor space with a vast range of stores,restaurants & themed
+            entertainment.</center>
+    </p><center>
+    <P><b>Address:</b> Lal Bahadur Shastri Rd,Ghatkopar West, Mumbai, Maharashtra 400086</P>
+    <p><b>Opening Hours:</b> 11:00AM - 9:30PM</p>
+    <p><b>Contact:</b> 022 4252 2541</p>
+    <center><a href="http://rcity.co.in/">Click here to Visit the website</center></a>
+    </center>
+   </div></div>
+
+  <div class="column"  style="margin: right 20px;" >
+  <h1> <center>Pheonix Paladium Mall</center></h1>
+  
+  <div class="photo">
+    <center><img src="image6.webp" alt="Mall  " width="500" height="300"></center>
+    <p>
+        <center><b>About mall:</b> Sizable retail center offering luxury merchandise,restaurants & a comedy club.
+        </center>
+    </p><center>
+    <P><b>Address:</b> 462, Senapati Bapat Marg, Lower Parel, Mumbai, Maharashtra 400064</P>
+    <p><b>Opening Hours:</b> 11:00AM - 10:00PM</p>
+    <p><b>Contact:</b> 022 4333 9994</p>
+    <center><a href="https://phoenixpalladium.com/">Click here to Visit the website</center></a>
+    </center>
+   </div>   </div>
+   
+
+     
+     
+     </div>
+</div>
+
+<div class="container">
+          
+        
+     
+  <div class="column"    style="margin-left: 0px;"  >
+   <h1> <center>Inorbit Mall Malad</center>  </h1>
+   <center><img src="image7.webp" alt="Mall  " width="500" height="300"></center>
+   <p>
+    <center><b>About mall:</b> It has all the classic brands for shopping, and the food court.</center>
+</p><center>
+<P><b>Address:</b> New Link Rd, Malad, Malad West, Mumbai, Maharashtra 400064</P>
+<p><b>Opening Hours:</b> 11:00AM - 10:00PM</p>
+<p><b>Contact:</b> 022 6706 9548</p>
+<center><a href="https://in.worldorgs.com/catalog/navi-mumbai/amusement-center/inorbit-mall-vashi">Click here to
+        Visit the website</center></a>
+  </center>
+  
+  </div>
+
+  <div class="column"  style="margin: right 20px;" >  
+  <h1> <center>Prime Mall</center>  </h1>
+  <div class="photo">
+    <center><img src="image8.webp" alt="Mall  " width="500" height="300"></center>
+    <p>
+        <center><b>About mall:</b> Shopping mall in Mumbai, Maharashtra</center>
+    </p><center>
+    <P><b>Address:</b> Irla Rd, Opposite Alfa, Indira Nagar, Vile Parle West, Mumbai, Maharashtra 400056</P>
+    <p><b>Opening Hours:</b> 10:30AM - 9:00PM</p>
+    <p><b>Contact:</b> 022 5654 7214</p>
+    <center><a href="https://foursquare.com/v/prime-mall/4b52fda7f964a520178c27e3">Click here to Visit the website
+    </center></a></center>
+</div></div></div>
+   
+   
+<div class="container">
+          
+  <div class="column"    style="margin-left: 0px;"  >
+   <h1> <center>DB Mall</center>  </h1> 
+   <div class="photo">
+    <center><img src="image9.jpg" alt="Mall  " width="500" height="300"></center>
+    <p>
+        <center><b>About mall:</b> Decent place. Lots of variety. All standard and branded outlets available.
+        </center>
+    </p><center>
+    <P><b>Address:</b> Sant Dnyaneshwar Marg, Sainath Nagar, Juhu, Mumbai, Maharashtra 400049</P>
+    <p><b>Opening Hours:</b> 11:00AM - 11:00PM</p>
+    <p><b>Contact:</b> 022 2623 8030</p>
+    <center><a href="https://www.justdial.com/">Click here to Visit the website</center></a>
+    </center>
+</div> </div>
+
+<div class="container">
+  <div class="column"  style="margin: right 20px;" >   
+  <h1> <center>Atria The Millennium Mall</center>  </h1>
+  <center><img src="image10.webp" alt="Mall  " width="500" height="300"></center>
+  <p>
+    <center><b>About mall:</b> Shopping mall in Mumbai,Established in the year 2006</center>
+</p><center>
+<P><b>Address:</b> Dr Annie Besant Rd, Lotus Colony, Worli, Mumbai, Maharashtra 400018</P>
+<p><b>Opening Hours:</b> 10:00AM - 12:00AM</p>
+<p><b>Contact:</b> 022 2498 6644</p>
+<center><a href="https://www.justdial.com/">Click here to Visit the website</center></a>
+</center>
+
+</div></div>
+  
+<center><button   style="margin-top:50px ; height: 50px  ;"onclick="document.location='index.html'">Click here to Return on home page</button></center>
+
+
+<footer class="footer-distributed">
+
+  <div class="footer-left">
+    <br>
+    <h1><span> Prima Mumbai Point</span></h1>
+
+    <p class="footer-links">
+      <a href="#">Home</a>
+      |
+      <a href="#">About us</a>
+      |
+      <a href="#">Contact us</a>
+    </p>
+
+    <p class="footer-company-name">&copy; 2022 Prima Mumbai Point Pvt. Ltd.</p>
+  </div>
+
+  <div class="footer-center">
+    <div>
+      <i class="fa fa-map-marker"></i>
+      <p><span>101-a, 21-b, Modi Nivas, S.v.road, Santacruz (west)</span>
+        Navi Mumbai - 400710</p>
+    </div>
+
+    <div>
+      <i class="fa fa-phone"></i>
+      <p><span>+91 9890544466</span> </p>
+    </div>
+    <div>
+      <i class="fa fa-envelope"></i>
+      <p><a href="mailto:support@primathink.com">support@primaMumbaipoint.com</a></p>
+    </div>
+  </div>
+  <div class="footer-right">
+    <p class="footer-company-about">
+      <span>Follow us</span>
+    <div class="footer-icons">
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fa fa-instagram"></i></a>
+      <a href="#"><i class="fa fa-linkedin"></i></a>
+      <a href="#"><i class="fa fa-google"></i></a>
+      <a href="#"><i class="fa fa-youtube"></i></a>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body style="background-color:powderblue;">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .header {
+      overflow: hidden;
+      background-color: black;
+      padding: 20px 10px;
+    }
+
+    .header a {
+      float: left;
+      color: black;
+      text-align: center;
+      padding: 12px;
+      text-decoration: none;
+      font-size: 18px;
+      line-height: 25px;
+      border-radius: 4px;
+    }
+
+    .header a.logo {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .header a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .header a.active {
+      background-color: dodgerblue;
+      color: white;
+    }
+
+    .header-right {
+      float: right;
+    }
+
+    @media screen and (max-width: 500px) {
+      .header a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+
+      .header-right {
+        float: right;
+      }
+    }
+
+    .container {
+
+
+
+      margin-top: 27px;
+      height: 650px;
+      width: 100%;
+
+
+
+    }
+
+    .column {
+
+      background-color: rgb(255, 255, 255);
+      width: 47.5%;
+      height: 600px;
+
+      float: left;
+      margin-left: 62px;
+      padding-right: 73px;
+
+
+    }
+
+    body {
+      background-color: white;
+      margin: 0;
+      padding: 0;
+      position: relative;
+    }
+
+    /* for footer */
+    .bg-div {
+      background: #2c292f;
+      overflow: hidden;
+      border-radius: 0px 0px 20px 20px;
+
+    }
+
+    @media (max-height:800px) {
+      footer {
+        position: static;
+      }
+
+      header {
+        padding-top: 40px;
+      }
+    }
+
+    .footer-distributed {
+      background-color: #000000;
+      box-sizing: border-box;
+      width: 100%;
+      text-align: left;
+      font: bold 16px sans-serif;
+      padding: 50px 50px 60px 50px;
+      margin-top: 2px;
+      margin-bottom: 4px;
+    }
+
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right {
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    /* Footer left */
+
+    .footer-distributed .footer-left {
+      width: 30%;
+    }
+
+    .footer-distributed h1 {
+      color: #ffffff;
+      font: normal 20px;
+      margin: 0;
+    }
+
+    /* The company logo */
+
+    .footer-distributed .footer-left img {
+      width: 30%;
+    }
+
+    .footer-distributed h span {
+      color: #ca8989;
+    }
+
+    /* Footer links */
+
+    .footer-distributed .footer-links {
+      color: #7d5d5d;
+      margin: 20px 0 12px;
+    }
+
+    .footer-distributed .footer-links a {
+      display: inline-block;
+      line-height: 1.8;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .footer-distributed .footer-company-name {
+      color: #8f9296;
+      font-size: 14px;
+      font-weight: normal;
+      margin: 0;
+    }
+
+    /* Footer Center */
+
+    .footer-distributed .footer-center {
+      width: 35%;
+    }
+
+
+    .footer-distributed .footer-center i {
+      background-color: #33383b;
+      color: #000000;
+      font-size: 25px;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 42px;
+      margin: 10px 15px;
+      vertical-align: middle;
+    }
+
+    .footer-distributed .footer-center i.fa-envelope {
+      font-size: 17px;
+      line-height: 38px;
+    }
+
+    .footer-distributed .footer-center p {
+      display: inline-block;
+      color: #747171;
+      vertical-align: middle;
+      margin: 0;
+    }
+
+    .footer-distributed .footer-center p span {
+      display: block;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 2;
+    }
+
+    .footer-distributed .footer-center p a {
+      color: #747171;
+      text-decoration: none;
+      ;
+    }
+
+
+    /* Footer Right */
+
+    .footer-distributed .footer-right {
+      width: 30%;
+    }
+
+    .footer-distributed .footer-company-about {
+      line-height: 20px;
+      color: #0f4575;
+      font-size: 13px;
+      font-weight: normal;
+      margin: 0;
+    }
+
+    .footer-distributed .footer-company-about span {
+      display: block;
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .footer-distributed .footer-icons {
+      margin-top: 25px;
+    }
+
+    .footer-distributed .footer-icons a {
+      display: inline-block;
+      width: 35px;
+      height: 35px;
+      cursor: pointer;
+      background-color: #33383b;
+      border-radius: 2px;
+
+      font-size: 20px;
+      color: #ffffff;
+      text-align: center;
+      line-height: 35px;
+
+      margin-right: 3px;
+      margin-bottom: 5px;
+    }
+
+    /* Here is the code for Responsive Footer */
+    /* You can remove below code if you don't want Footer to be responsive */
+
+
+    @media (max-width: 880px) {
+
+      .footer-distributed .footer-left,
+      .footer-distributed .footer-center,
+      .footer-distributed .footer-right {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+
+      .footer-distributed .footer-center i {
+        margin-left: 0;
+      }
+
+    }
+
+    .dropdown .dropbtn {
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: black;
+    }
+
+    .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: right;
+    }
+
+    .dropdown-content a:hover {
+      background-color: white;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial
+    }
+
+    .topnav {
+      overflow: hidden;
+      background-color: black;
+    }
+
+    .topnav a {
+      float: right;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+
+    .topnav .icon {
+      display: none;
+    }
+
+    .dropdown {
+      float: right;
+      overflow: hidden;
+    }
+
+    .dropdown .dropbtn {
+      font-size: 17px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(155, 92, 92, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      float: right;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: right;
+    }
+
+    .topnav a:hover,
+    .dropdown:hover .dropbtn {
+      background-color: rgb(19, 14, 14);
+      color: white;
+    }
+
+    .dropdown-content a:hover {
+      background-color: gray;
+      color: black;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    @media screen and (max-width: 600px) {
+
+      .topnav a:not(:first-child),
+      .dropdown .dropbtn {
+        display: none;
+      }
+
+      .topnav a.icon {
+        float: right;
+        display: block;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .topnav.responsive {
+        position: relative;
+      }
+
+      .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+
+      .topnav.responsive .dropdown {
+        float: none;
+      }
+
+      .topnav.responsive .dropdown-content {
+        position: relative;
+      }
+
+      .topnav.responsive .dropdown .dropbtn {
+        display: block;
+        width: 100%;
+        text-align: left;
+      }
+    }
+  </style>
+  </head>
+
+  <body>
+
+    <div class="main">
+      <div class="header">
+        <b> <strong> <a style="color: white;" class="logo">Best Bike Showrooms in Mumbai </a></strong></b>
+        <div class="topnav" id="myTopnav">
+          <a href="index.html" class="active">Home</a>
+          <a href="GallaryPage.html">View Mumbai Gallary </a>
+          <a href="ContactForm.html">Contact Us</a>
+          <div class="dropdown">
+            <button class="dropbtn">Search & Find anything in Mumbai
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="CarShowroomAnimation.html">Car Showrooms</a>
+              <a href="BikeAnimation.html">Bike Showrooms</a>
+              <a href="MallsAnimation.html">Malls</a>
+              <a href="GymsAnimation.html">Best Gym</a>
+              <a href="CafeAnimation.html">Cafes</a>
+              <a href="Restaurantanimation.html">Restaurant</a>
+              <a href="StreetFoodAnimation.html">Street Food</a>
+              <a href="NeurologistAnimation.html">Best Neurologist</a>
+              <a href="TempleAnimation.html"> Temple</a>
+            </div>
+          </div>
+          <a href="Aboutus.html">About Us</a>
+
+        </div>
+        <li>
+
+
+      </div>
+      </li>
+
+    </div>
+
+    </div>
+
+
+
+    </div>
+
+    <div class="container">
+      <div class="column" style="margin-left: 0px;">
+        <h1>
+          <center>F3 motors</center>
+        </h1>
+        <div class="photo">
+          <center> <img
+              src="https://content3.jdmagicbox.com/comp/mumbai/g7/022pxx22.xx22.170817183021.c9g7/catalogue/f3-motors-mahim-mumbai-second-hand-motorcycle-dealers-2nagdd013f.jpg"
+              width="300px" />
+          </center>
+          <center>
+            <p> Services offered:In-store shopping , Delivery. <br>Hours of opening:9:30am–8:30pm<br><br>Address:
+              Devdarshan, SHOP NO 10 & in 11, Mogul Ln,<br> Mahim West, Mahim, Mumbai, 400016
+              <br><br> Contact No. 097695 60981
+            </p>
+          </center>
+          <center><a href="https://www.instagram.com/f3.motors/?utm_source=ig_profile_share&igshid=1u2158h1wncw6">click
+              here to more information</a></center>
+          <center><a
+              href="https://www.google.com/maps/dir/21.1610858,79.0725101/f3+motors+about/@20.0328337,71.4698254,6z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3be7c92f12d362bf:0x4236e6578114fd54!2m2!1d72.8468995!2d19.0362383">Click
+              here for direction</a></center>
+        </div>
+      </div>
+      <div class="column" style="margin: right 20px;">
+        <h1>
+          <center>Jawa Yezdi Andheri</center>
+        </h1>
+
+        <div class="photo">
+          <center> <img
+              src="https://www.rushlane.com/wp-content/uploads/2021/12/jawa-yezdi-showroom-motorcycles-600x338.jpg"
+              width="300px" alt="photo" /></center>
+          <center>
+            <p> Services offered:In-store shopping , Delivery. <br>Hours of opening:10:00am–7:30pm<br><br>Address: Jawa
+              Yezdi 12, 13, 14, 15 Nav bharat chs ltd, <br>CD Barfiwala Road, Juhu Lane, Andheri West, Mumbai,
+              Maharashtra 400058
+              <br><br> Contact No.090290 62626
+            </p>
+          </center>
+          <center><a href="http://www.jawayezdiandheri.com/">click here to more information</a></center>
+          <center><a
+              href="https://www.google.com/maps/dir//jawa+yezdi+andheri/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x3be7c9e2d1259f0b:0x87bc9ca34ba8da98?sa=X&ved=2ahUKEwjI-e6fnoz5AhX_4TgGHXW0Dq4Q9Rd6BAhPEAU">Click
+              here for direction</a></center>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="column" style="margin-left: 0px;">
+        <h1>
+          <center>Vision Automobiles</center>
+        </h1>
+        <div class="photo">
+          <center> <img
+              src="https://indiasthan.cdnpro.in/states/br/siwan/car_repair/pratik-automobiles---hero-motocorp-252351.jpg"
+              width="300px" alt="photo" /></center>
+          <center>
+            <p> Services offered:In-store shopping , Delivery. <br>Hours of opening:9:00am–7:00pm<br><br>Address: No
+              14D, Kurla Industrial Estate, Nari Seva Sadan Rd, <br>off Lal Bahadur Shastri Road, Narayan Nagar, Mumbai,
+              Maharashtra 400086
+              <br><br> Contact No.022 2526 2220
+            </p>
+          </center>
+          <center><a
+              href="https://dealers.heromotocorp.com/vision-automobiles-hero-motocorp-two-wheeler-dealer-nss-road-narayan-nagar-mumbai-35439/Home?utm_source=locator&utm_medium=googleplaces/">click
+              here to more information</a></center>
+          <center><a
+              href="https://www.google.com/maps/dir//vision+automobiles+-+hero+motocorp/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x3be7c87e70000001:0xf2d61a27bd090aa4?sa=X&ved=2ahUKEwiF5d3IoIz5AhVOxHMBHeMUDMEQ9Rd6BAhVEAQ">Click
+              here for direction</a></center>
+        </div>
+      </div>
+      <div class="column" style="margin: right 20px;">
+        <h1>
+          <center>Jhaveri Honda</center>
+        </h1>
+        <div class="photo">
+          <center> <img
+              src="https://content.jdmagicbox.com/comp/mumbai/f4/022pxx22.xx22.000108443838.b8f4/catalogue/jhaveri-honda-mazgaon-mumbai-scooter-dealers-3hdc6ka.jpeg?clr=661c00"
+              width="300px" alt="photo" /></center>
+          <center>
+            <p> Services offered:In-store shopping , Delivery. <br>Hours of opening:10:00am–7:00pm<br><br>Address: 312,
+              Hanuman Building, Perin Nariman St,<br>opposite Central Library, Mumbai, Maharashtra 400001
+              <br><br> Contact No.098205 31738
+            </p>
+          </center>
+          <center><a href="https://www.jhaverihonda.com/">click here to more information</a></center>
+          <center><a
+              href="https://www.google.com/maps/dir//jhaveri+honda/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x3be7d1da55555561:0xea6460733640c4dc?sa=X&hl=en-GB&ved=2ahUKEwiUj5vsooz5AhXmT2wGHRJADKUQ9Rd6BAgLEAU"">Click here for direction</a></center>          
+  </div>
+     </div>
+       </div>
+</div>
+<div class=" container">
+              <div class="column" style="margin-left: 0px;">
+                <h1>
+                  <center>Autolink</center>
+                </h1>
+                <div class="photo">
+                  <center> <img
+                      src="https://content3.jdmagicbox.com/comp/mumbai/r5/022pxx22.xx22.160124151529.a3r5/catalogue/auto-link-hero-borivali-west-mumbai-motorcycle-dealers-hero-iiqccb4vmg.jpg?clr=412533"
+                      width="300px" alt="photo" /></center>
+                  <center>
+                    <p> Services offered:In-store shopping , Delivery. <br>Hours of
+                      opening:9:00am–7:00pm<br><br>Address: Autolink Hero, shivneri Mhada Colony, near box 8 Pizza,
+                      mahavir nagar signal, <br>New Link Rd, Mahavir Nagar, Kandivali West, Mumbai, Maharashtra 400067
+                      <br><br> Contact No.098675 45951
+                    </p>
+                  </center>
+                  <center><a
+                      href="https://dealers.heromotocorp.com/auto-link-hero-motocorp-two-wheeler-dealer-borivali-west-mumbai-35276/Home">click
+                      here to more information</a></center>
+                  <center><a
+                      href="https://www.google.com/maps/dir/21.1610858,79.0725101/autolink+mumbai/@20.0328337,71.4675004,6z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3be7b6d495b5f7d5:0x5e47038050a760c8!2m2!1d72.838803!2d19.2153495?hl=en-GB">Click
+                      here for direction</a></center>
+                </div>
+              </div>
+              <div class="column" style="margin: right 20px;">
+                <h1>
+                  <center>Jaishree Automobiles Two Wheeler Dealers</center>
+                </h1>
+                <div class="photo">
+                  <center> <img
+                      src="https://content3.jdmagicbox.com/comp/mumbai/h1/022pxx22.xx22.171007185231.t1h1/catalogue/jaishree-automobiles-kandivali-west-mumbai-motorcycle-dealers-13qnrch92x.jpg"
+                      width="300px" alt="photo" /></center>
+                  <center>
+                    <p> Services offered:In-store shopping , Delivery. <br>Hours of
+                      opening:10:26am–9:00pm<br><br>Address: Shop No 7 Kamalvan Soc, Opp Bobby Shopping Center, Mahatma
+                      Gandhi Rd, <br>Kandivali West, Mumbai, Maharashtra 400067
+                      <br><br> Contact No.099303 12343
+                    </p>
+                  </center>
+                  <center><a href="https://jaishree-automobiles-dealerstwo-wheeler.business.site/">click here to more
+                      information</a></center>
+                  <center><a
+                      href="https://www.google.com/maps/dir/21.1610858,79.0725101/Jaishree+Automobiles+Two+Wheeler+Dealers/@20.0328337,71.465848,6z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3be7b6cf6140e0e7:0xd8f37735d389a22f!2m2!1d72.835588!2d19.207808">Click
+                      here for direction</a></center>
+                </div>
+              </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="column" style="margin-left: 0px;">
+          <h1>
+            <center>Pilot Pro Honda </center>
+          </h1>
+          <div class="photo"></div>
+          <center> <img
+              src="https://lh5.googleusercontent.com/p/AF1QipOVlSfLGvjRMrSWrpWQEARzAtnT7DHkATQOGb4V=w1080-k-no"
+              width="300px" alt="photo" /></center>
+          <center>
+            <p> Services offered:In-store shopping , Delivery. <br>Hours of opening:10:00am–10:30pm<br><br>Address: No.
+              C-1/C,Kantilal Maganlal Estate, Pannalal compound, LBS Marg, <br>West, Bhandup, Mumbai, Maharashtra 400078
+              <br><br> Contact No.087677 56775
+            </p>
+          </center>
+          <center><a
+              href="https://compare.pricesofindia.com/repair-service-center/honda/maharashtra/mumbai/pilot-honda-marg-bhandup-w-mumbai-400078-5756">click
+              here to more information</a></center>
+          <center><a
+              href="https://www.google.com/maps/dir/21.1610858,79.0725101/pilot+pro+honda/@20.1000032,71.5169636,6z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3be7b866884588a7:0xbf73e44eb26bfd19!2m2!1d72.9372926!2d19.1548547">Click
+              here for direction</a></center>
+        </div>
+        <div class="column" style="margin: right 20px;">
+          <h1>
+            <center>Harnek Motors</center>
+          </h1>
+          <div class="photo"></div>
+          <center> <img src="https://lh5.googleusercontent.com/p/AF1QipMyo9ZZDdYz7GMM10KWNkQypR3MhiTNA9HfdH0=w1080-k-no"
+              width="200px" alt="photo" /></center>
+          <center>
+            <p> Services offered:In-store shopping , Delivery. <br>Hours of opening:10:30am–9:00pm<br><br>Address: Shop
+              no 2 Sarvodaya Society Gokhale Nagar Padmavati Devi Marg Gokhale Nagar IIT, Tirandaz, Powai, Mumbai,
+              Maharashtra 400076
+              <br><br> Contact No.098331 60616
+            </p>
+          </center>
+          <center><a href="http://www.harnekmotors.com/">click here to more information</a></center>
+          <center><a
+              href="https://www.google.com/maps/dir/21.1610858,79.0725101/harnek+motors+mumbai/@20.0861698,71.5076295,6z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3be7c7ed8cf643a7:0xefe9ef43cccd9368!2m2!1d72.9186366!2d19.1241644?hl=en-GB">Click
+              here for direction</a></center>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="container">
+
+      <div class="column" style="margin-left: 0px;">
+        <h1>
+          <center>PURE EV Scooters</center>
+        </h1>
+        <div class="photo">
+          <center> <img src="https://lh5.googleusercontent.com/p/AF1QipMyo9ZZDdYz7GMM10KWNkQypR3MhiTNA9HfdH0=w1080-k-no"
+              width="150px" alt="photo" /></center>
+          <center>
+            <p> Services offered:In-store shopping , Delivery. <br>Hours of opening:10:30am–8:30pm<br><br>Address: Shop
+              9,
+              E Wing, Shreepal Nagar Society, <br>Satya Nagar Rd, opp. Bhagwati Hotel, Borivali, W, Maharashtra 400092
+              <br><br> Contact No.079772 13124
+            </p>
+          </center>
+          <center><a href="https://pureev.in/">click here to more information</a></center>
+          <center><a
+              href="https://www.google.com/maps/dir/21.1610858,79.0725101/PURE+EV+Scooters+Mumbai/@20.2401778,71.4117031,6z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3be7b1494f091e2f:0xc3143fdacc6230f1!2m2!1d72.8420797!2d19.2178304">Click
+              here for direction</a></center>
+        </div>
+      </div>
+      <div class="column" style="margin: right 20px;">
+        <h1>
+          <center>Yamaha Authorised Showroom</center>
+        </h1>
+        <center> <img
+            src="https://content.jdmagicbox.com/comp/mumbai/q8/022pxx22.xx22.091030105441.h8q8/catalogue/avian-yamaha-sandhurst-road-mumbai-motorcycle-dealers-yamaha-authorised--ptpqam.jpg?clr="
+            width="300px" alt="photo" /></center>
+        <center>
+          <p> Services offered:In-store shopping , Delivery. <br>Hours of opening:9:30am–8:30pm<br><br>Address: Gala No
+            1,
+            2, 3, 4, Business Class Building Junction, Chincholi Bunder Road,<br>SV Rd, Malad West, Mumbai, Maharashtra
+            400064
+            <br><br> Contact No.090299 55230
+          </p>
+        </center>
+        <center><a href="https://www.yamaha-motor-india.com/">click here to more information</a></center>
+        <center><a
+            href="https://www.google.com/maps/dir/21.1610858,79.0725101/yamaha+authorised+showroom+in+mumbai/@20.0310702,71.4679148,6z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3be7b6feb454865f:0xade50368e2cfcd93!2m2!1d72.845716!2d19.1569479">Click
+            here for direction</a></center>
+      </div>
+    </div>
+    </div>
+    </div>
+
+    <center><button style="margin-top:50px ; height: 50px  ;" onclick="document.location='index.html'">Click here to
+        Return on home page</button></center>
+
+    <footer class="footer-distributed">
+
+      <div class="footer-left">
+        <br>
+        <h1><span> Prima Mumbai Point</span></h1>
+
+        <p class="footer-links">
+          <a href="#">Home</a>
+          |
+          <a href="#">About us</a>
+          |
+          <a href="#">Contact us</a>
+        </p>
+
+        <p class="footer-company-name">&copy; 2022 Prima Mumbai Point Pvt. Ltd.</p>
+      </div>
+
+      <div class="footer-center">
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span>101-a, 21-b, Modi Nivas, S.v.road, Santacruz (west)</span>
+            Navi Mumbai - 400710</p>
+        </div>
+
+        <div>
+          <i class="fa fa-phone"></i>
+          <p><span>+91 9890544466</span> </p>
+        </div>
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="mailto:support@primathink.com">support@primaMumbaipoint.com</a></p>
+        </div>
+      </div>
+      <div class="footer-right">
+        <p class="footer-company-about">
+          <span>Follow us</span>
+        <div class="footer-icons">
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-instagram"></i></a>
+          <a href="#"><i class="fa fa-linkedin"></i></a>
+          <a href="#"><i class="fa fa-google"></i></a>
+          <a href="#"><i class="fa fa-youtube"></i></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+</html>

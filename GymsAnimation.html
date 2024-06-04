@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+  <body style="background-color: powderblue;">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .header {
+      overflow: hidden;
+      background-color: black;
+      padding: 20px 10px;
+    }
+
+    .header a {
+      float: left;
+      color: black;
+      text-align: center;
+      padding: 12px;
+      text-decoration: none;
+      font-size: 18px;
+      line-height: 25px;
+      border-radius: 4px;
+    }
+
+    .header a.logo {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .header a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .header a.active {
+      background-color: dodgerblue;
+      color: white;
+    }
+
+    .header-right {
+      float: right;
+    }
+
+    @media screen and (max-width: 500px) {
+      .header a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+
+      .header-right {
+        float:left;
+      }
+    }
+
+    .container {
+
+
+
+
+      height: fit-content;
+      width: auto;
+
+
+
+    }
+
+   
+    body{
+          background-color: white;
+          margin: 0;
+            padding: 0;
+           position: relative;
+        }
+            /* for footer */
+    .bg-div {
+      background: #2c292f;
+      overflow: hidden;
+      border-radius: 0px 0px 20px 20px;
+
+    }
+
+    @media (max-height:800px) {
+      footer {
+        position: static;
+      }
+
+      header {
+        padding-top: 40px;
+      }
+    }
+
+    .footer-distributed {
+      background-color: #000000;
+      box-sizing: border-box;
+      width: 100%;
+      text-align: left;
+      font: bold 16px sans-serif;
+      padding: 50px 50px 60px 50px;
+      margin-top: 2px;
+      margin-bottom: 4px;
+    }
+
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right {
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    /* Footer left */
+
+    .footer-distributed .footer-left {
+      width: 30%;
+    }
+
+    .footer-distributed h1 {
+      color: #ffffff;
+      font: normal 20px;
+      margin: 0;
+    }
+
+    /* The company logo */
+
+    .footer-distributed .footer-left img {
+      width: 30%;
+    }
+
+    .footer-distributed h span {
+      color: #ca8989;
+    }
+
+    /* Footer links */
+
+    .footer-distributed .footer-links {
+      color: #7d5d5d;
+      margin: 20px 0 12px;
+    }
+
+    .footer-distributed .footer-links a {
+      display: inline-block;
+      line-height: 1.8;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .footer-distributed .footer-company-name {
+      color: #8f9296;
+      font-size: 14px;
+      font-weight: normal;
+      margin: 0;
+    }
+
+    /* Footer Center */
+
+    .footer-distributed .footer-center {
+      width: 35%;
+    }
+
+
+    .footer-distributed .footer-center i {
+      background-color: #33383b;
+      color: #000000;
+      font-size: 25px;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 42px;
+      margin: 10px 15px;
+      vertical-align: middle;
+    }
+
+    .footer-distributed .footer-center i.fa-envelope {
+      font-size: 17px;
+      line-height: 38px;
+    }
+
+    .footer-distributed .footer-center p {
+      display: inline-block;
+      color: #747171;
+      vertical-align: middle;
+      margin: 0;
+    }
+
+    .footer-distributed .footer-center p span {
+      display: block;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 2;
+    }
+
+    .footer-distributed .footer-center p a {
+      color: #747171;
+      text-decoration: none;
+      ;
+    }
+
+
+    /* Footer Right */
+
+    .footer-distributed .footer-right {
+      width: 30%;
+    }
+
+    .footer-distributed .footer-company-about {
+      line-height: 20px;
+      color: #0f4575;
+      font-size: 13px;
+      font-weight: normal;
+      margin: 0;
+    }
+
+    .footer-distributed .footer-company-about span {
+      display: block;
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .footer-distributed .footer-icons {
+      margin-top: 25px;
+    }
+
+    .footer-distributed .footer-icons a {
+      display: inline-block;
+      width: 35px;
+      height: 35px;
+      cursor: pointer;
+      background-color: #33383b;
+      border-radius: 2px;
+
+      font-size: 20px;
+      color: #ffffff;
+      text-align: center;
+      line-height: 35px;
+
+      margin-right: 3px;
+      margin-bottom: 5px;
+    }
+
+    /* Here is the code for Responsive Footer */
+    /* You can remove below code if you don't want Footer to be responsive */
+
+
+    @media (max-width: 880px) {
+
+      .footer-distributed .footer-left,
+      .footer-distributed .footer-center,
+      .footer-distributed .footer-right {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+
+      .footer-distributed .footer-center i {
+        margin-left: 0;
+      }
+
+    }
+     
+        .dropdown .dropbtn {
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+
+    .dropdown-content {
+      display: none;
+   
+      background-color: black;
+    }
+
+    .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown-content a:hover {
+      background-color: white;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    body {margin:0;font-family:Arial}
+
+.topnav {
+  overflow: hidden;
+  background-color: black;
+}
+
+.topnav a {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+.topnav .icon {
+  display: none;
+}
+
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 17px;    
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(155, 92, 92, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: rgb(19, 14, 14);
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background-color: gray;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic,900);
+* {
+  box-sizing: border-box;
+}
+
+body {
+	font-family: "Lato","Avenir Next",Arial,sans-serif;
+  margin: 0;
+  background: #000;
+  background-size: cover;
+}
+
+video {
+position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.overlay {
+    
+    
+  height: 100vh;
+  position: absolute;
+  top: 50px;
+  left: 580px;
+
+  z-index: 2;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+ 
+}
+.overlay h2 {
+   
+   
+    color: #ddd;
+    font-weight: 600;
+    mix-blend-mode: overlay;
+
+    text-align: center;
+    text-align: center;
+    
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 3;
+    max-width: 400px;
+    width: 100%;
+    height: 50px;
+    
+  
+  
+}
+header {
+	background:powderblue;
+	position: fixed;
+	width: 100%;
+	text-align: center;
+	color: black;
+	-webkit-transition: .4s;
+	transition: .4s;
+	padding: 0.5em;
+}
+
+
+
+
+  </style>
+
+
+  <div class="main">
+    
+
+    <div class="header">
+    <b> <strong> <a  style="color: white;"class="logo">Best Gyms in Mumbai</a></strong></b>
+      <div class="topnav" id="myTopnav">
+        <a href="index.html" class="active">Home</a>
+        <a href="GallaryPage.html">View Mumbai Gallary </a>
+        <a href="ContactForm.html">Contact Us</a>
+        <div class="dropdown">
+          <button class="dropbtn">Search & Find anything in Mumbai 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="CarShowroomAnimation.html">Car Showrooms</a>
+            <a href="BikeAnimation.html">Bike Showrooms</a>
+            <a href="MallsAnimation.html">Malls</a>
+            <a href="GymsAnimation.html">Best Gym</a>
+            <a href="CafeAnimation.html">Cafes</a>
+            <a href="Restaurantanimation.html">Restaurant</a>
+            <a href="StreetFoodAnimation.html">Street Food</a>
+            <a href="NeurologistAnimation.html">Best Neurologist</a>
+            <a href="TempleAnimation.html"> Temple</a>
+          </div>
+        </div> 
+        <a href="Aboutus.html">About Us</a>
+      
+      </div>
+        <li> 
+          </div>
+        </li>
+        
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="container">
+
+
+    <video style="padding: bottom 20%; ;" playsinline autoplay muted loop>
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-man-at-the-gym-exercising-with-a-dumbbell-38689-large.mp4">
+      
+      Your browser does not support the video tag. I suggest you upgrade your browser.
+   </video>
+
+  </div>
+
+     
+  <footer class="footer-distributed">
+
+    <div class="footer-left">
+      <br>
+      <h1><span> Prima Mumbai Point</span></h1>
+
+      <p class="footer-links">
+        <a href="#">Home</a>
+        |
+        <a href="#">About us</a>
+        |
+        <a href="#">Contact us</a>
+      </p>
+
+      <p class="footer-company-name">&copy; 2022 Prima Mumbai Point Pvt. Ltd.</p>
+    </div>
+
+    <div class="footer-center">
+      <div>
+        <i class="fa fa-map-marker"></i>
+        <p><span>101-a, 21-b, Modi Nivas, S.v.road, Santacruz (west)</span>
+          Navi Mumbai - 400710</p>
+      </div>
+
+      <div>
+        <i class="fa fa-phone"></i>
+        <p><span>+91 9890544466</span> </p>
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:support@primathink.com">support@primaMumbaipoint.com</a></p>
+      </div>
+    </div>
+    <div class="footer-right">
+      <p class="footer-company-about">
+        <span>Follow us</span>
+      <div class="footer-icons">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-google"></i></a>
+        <a href="#"><i class="fa fa-youtube"></i></a>
+      </div>
+    </div>
+  </footer>
+    <div  class="overlay">
+        <li><h2 style="margin: top 200px; ;"><center>Waves Gyms</center></h2>
+        <h2> Nitrro Bespoke Fitness </h2>
+        <h2>I Think Fitness</h2>
+        <h2>Turbo Fitness</h2>
+        <h2>CULT Palladium</h2>
+        <h2>i5 Fitness</h2>
+        <h2>Edge Fitness</h2>
+        <h2>Xtreme Fitness Force</h2>
+
+          <center><a href="Gyms.html" style="color: rgb(64, 93, 219); margin-top: 100px;"><h3>click here to get more
+              information about Restaurants</h3></a></center>
+        </h2></li>
+        
+</body>
+
+</html>
